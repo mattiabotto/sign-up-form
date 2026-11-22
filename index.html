@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="./styles/reset.css">
   <link rel="stylesheet" href="./styles/styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,64 @@
 </head>
 
 <body>
-  Test
+  <header>
+    <div class="title-mask">
+      <h1>ODIN</h1>
+    </div>
+    <p class="photo-credit">Photo by <a
+        href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Halie
+        West</a> on <a
+        href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+    </p>
+  </header>
+
+  <main>
+    <p>This is not a real online service! You know you need something like this in your life to help you realize your
+      deepest dreams. Sign up <em>now</em> to get started.</p>
+    <p>You <em>know</em> you want to.</p>
+
+    <form action="" method="post" id="sign-up-form">
+      <h2>Let's do this!</h2>
+
+      <div class="form-row">
+        <div class="form-widget">
+          <label for="first-name">First name</label>
+          <input type="text" id="first-name" name="first-name">
+        </div>
+
+        <div class="form-widget">
+          <label for="last-name">Last name</label>
+          <input type="text" id="last-name" name="last-name">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-widget">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div class="form-widget">
+          <label for="phone-number">Phone number</label>
+          <input type="tel" id="phone-number" name="phone-number">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-widget">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password">
+        </div>
+        <div class="form-widget">
+          <label for="confirm-password">Confirm password</label>
+          <input type="password" id="confirm-password" name="confirm-password">
+        </div>
+      </div>
+    </form>
+
+    <button type="submit" form="sign-up-form">Create Account</button>
+
+    <p class="log-in">Already have an account? <a href="">Log in</a></p>
+  </main>
 </body>
 
 </html>
