@@ -11,8 +11,11 @@
   --title-mask-padding: .6rem;
   --title-color: #f0f0f0;
   --credit-color: #c6c3c0;
-  --main-font-family: "Helvetica", "Arial", sans-serif;
-}
+  --main-font-family: "Inter", "Helvetica", "Arial", sans-serif;
+  --main-bg-color: #f5f4f4;
+  --main-color: #111;
+  --main-padding-x: 2.3rem;
+  }
 
 body {
   font-family: var(--main-font-family);
@@ -65,5 +68,21 @@ h1 {
 
 main {
   flex-basis: 63%;
-  background-color: #f5f4f4;
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main p:not(.log-in) {
+  color: var(--main-color);
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: calc(var(--main-padding-x) / 3) var(--main-padding-x);
+  max-inline-size: 53ch;
+  line-height: 1.2;
+}
+
+main p + p {
+  margin-bottom: var(--main-padding-x);
 }
