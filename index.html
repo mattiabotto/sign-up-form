@@ -32,7 +32,7 @@
       deepest dreams. <br>Sign up <em>now</em> to get started.</p>
     <p>You <em>know</em> you want to.</p>
 
-    <form action="" method="post" id="sign-up-form">
+    <form action="" method="post" class="sign-up-form" id="sign-up-form">
       <h2>Let's do this!</h2>
 
       <div class="form-row">
@@ -61,11 +61,13 @@
       <div class="form-row">
         <div class="form-widget">
           <label for="password">Password</label>
-          <input type="password" id="password" name="password">
+          <input type="password" id="password" name="password" minlength="8">
+          <p class="pass-validation">Password must be at least 8 characters</p>
         </div>
         <div class="form-widget">
           <label for="confirm-password">Confirm password</label>
-          <input type="password" id="confirm-password" name="confirm-password">
+          <input type="password" id="confirm-password" name="confirm-password" minlength="8">
+          <p class="pass-validation">Password must be at least 8 characters</p>
         </div>
       </div>
     </form>

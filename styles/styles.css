@@ -15,6 +15,9 @@
   --main-bg-color: #f5f4f4;
   --main-color: #111;
   --main-padding-x: 2.3rem;
+  --form-color: #3a3a3a;
+  --focus-color: #0088ff;
+  --invalid-color: #ff4400;
   }
 
 body {
@@ -85,4 +88,70 @@ main p:not(.log-in) {
 
 main p + p {
   margin-bottom: var(--main-padding-x);
+}
+
+.sign-up-form {
+  background-color: #fff;
+  margin-bottom: 2rem;
+  padding: 1rem var(--main-padding-x);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px #ccc;
+  color: var(--form-color);
+}
+
+.sign-up-form > * {
+  margin-bottom: 1rem;
+}
+
+.sign-up-form h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.sign-up-form .form-row {
+  display: flex;
+  gap: 4rem;
+  justify-content: flex-start;
+}
+
+.form-row .form-widget {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-widget label {
+  text-transform: uppercase;
+  font-size: .7rem;
+  font-weight: 600;
+}
+
+.form-widget input {
+  font-size: .8rem;
+  padding: .2em .5em;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+}
+
+.form-widget input:focus
+ {
+  outline: none;
+  border: 1px solid var(--focus-color);
+  box-shadow: 2px 2px 4px #ccc;
+}
+
+.form-widget input[type="password"]:user-invalid {
+   outline: none;
+  border: 1px solid var(--invalid-color);
+}
+
+.form-widget .pass-validation {
+  padding: .5rem 0;
+  color: var(--invalid-color);
+  font-size: .6rem;
+  opacity: 0;
+}
+
+.form-widget input[type="password"]:user-invalid + .pass-validation {
+  opacity: 1;
 }
