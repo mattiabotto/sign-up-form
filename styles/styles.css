@@ -69,6 +69,10 @@ h1 {
   align-self: center;
 }
 
+.photo-credit a:hover {
+  color: var(--title-color);
+}
+
 main {
   flex-basis: 63%;
   background-color: var(--main-bg-color);
@@ -93,14 +97,14 @@ main p + p {
 .sign-up-form {
   background-color: #fff;
   margin-bottom: 2rem;
-  padding: 1rem var(--main-padding-x);
+  padding: 1rem var(--main-padding-x) .5rem;
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 8px #ccc;
   color: var(--form-color);
 }
 
-.sign-up-form > * {
+.sign-up-form > *:not(:last-child) {
   margin-bottom: 1rem;
 }
 
@@ -141,7 +145,7 @@ main p + p {
 }
 
 .form-widget input[type="password"]:user-invalid {
-   outline: none;
+  outline: none;
   border: 1px solid var(--invalid-color);
 }
 
@@ -154,4 +158,43 @@ main p + p {
 
 .form-widget input[type="password"]:user-invalid + .pass-validation {
   opacity: 1;
+}
+
+.submit-btn {
+  align-self: baseline;
+  margin-left: var(--main-padding-x);
+  font-size: .8rem;
+  font-weight: 700;
+  padding: .8em 3em;
+  color: var(--title-color);
+  background-color: #596D48;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px #596d4857;
+  margin-bottom: 1.5rem;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  background-color: #728b5b;
+}
+
+p.log-in {
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--form-color);
+  padding: 0 var(--main-padding-x);
+}
+
+p.log-in a {
+  text-decoration: none;
+  color: #596D48;
+  font-weight: 700;
+}
+
+p.log-in a:hover {
+  color: #728b5b;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
 }
